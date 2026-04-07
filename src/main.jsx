@@ -8,7 +8,8 @@ import ErrorPage from './Error/ErrorPage'
 import Homepage from './pages/Homepage/Homepage'
 import Apps from './pages/Allapps/Apps'
 import InstaledApps from './pages/InstalledApps/InstaledApps'
-import Contribute from './pages/contribute/Contribute'
+import Contribute from './pages/contribute/Dashboard'
+import Dashboard from './pages/contribute/Dashboard'
 
 
 const router = createBrowserRouter(
@@ -30,8 +31,8 @@ const router = createBrowserRouter(
           Component:InstaledApps
         },
         {
-          path:'/contribute',
-          Component:Contribute
+          path:'/Dashboard',
+          Component:Dashboard 
         }
        
       ],

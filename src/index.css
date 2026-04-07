@@ -3,5 +3,6 @@
 
 
 a.active {
-  color: rgb(162, 20, 162);
+  color: rgb(218, 53, 218);
+  border-bottom: 2px purple solid ;
 }

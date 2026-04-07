@@ -12,10 +12,10 @@ const Navbar = () => {
            
            <div className='flex  items-center'>
             <img className='w-12 h-12' src={logo} alt='Logo'></img>
-            <h2 className='text-purple-600 text-2xl font-bold'>CeleStore</h2>
+            <Link to='/' className='text-purple-600 text-2xl font-bold'>CeleStore</Link>
            </div>
 
-         <ul className='md:flex justify-between gap-3 text-lg font-medium uppercase hidden '>
+         <ul className='md:flex justify-between gap-3 text-md font-semibold uppercase hidden '>
             <li>
                 <NavLink to='/' > Home </NavLink>
             </li>
@@ -26,7 +26,7 @@ const Navbar = () => {
                 <NavLink to='/instalation' > Instalation </NavLink>
             </li>
             <li>
-                <NavLink to='/contribute' > Contribute </NavLink>
+                <NavLink to='Dashboard' > Dashboard </NavLink>
             </li>
         </ul> 
         <button className='flex gap-1.5 items-center bg-purple-600 btn text-white'> <FaGithub></FaGithub> Contribute</button>
