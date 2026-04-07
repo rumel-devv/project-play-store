@@ -2,8 +2,8 @@ import React from 'react';
 
 const Stats = () => {
     return (
-        <div>
-            Stats
+        <div className='h-screen border-2  bg-black'>
+           
         </div>
     );
 };
