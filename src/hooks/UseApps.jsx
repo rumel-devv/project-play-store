@@ -7,10 +7,10 @@ const UseApps = () => {
          const fetchData = async () => {
             const res = await fetch('/data.json')
             const data = await res.json()
-            setTimeout(() => {
+             setTimeout(() => {
                 setApps(data);
-              setLoading(false)
-            },1000)
+              setLoading(false) 
+             },1000)            
          }
          fetchData()
        },[])
