@@ -1,23 +1,11 @@
-import React, { useEffect, useState } from 'react';
 import AppCard from '../Ui/AppCard';
 import { PacmanLoader } from 'react-spinners';
 import { Link } from 'react-router';
+import UseApps from '../../hooks/UseApps';
 
 const TrendingApps = () => {
 
-    const [apps,setApps] = useState([])
-    const [loading,setLoading] = useState(true)
-   useEffect(() => {
-     const fetchData = async () => {
-        const res = await fetch('/data.json')
-        const data = await res.json()
-        setTimeout(() => {
-            setApps(data);
-          setLoading(false)
-        },1000)
-     }
-     fetchData()
-   },[])
+  const {apps,loading} = UseApps()
 
     return (
         <div className='w-full md:w-10/12 mx-auto my-10 text-center'>

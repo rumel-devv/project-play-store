@@ -4,7 +4,7 @@ import Flogo from '../../assets/images/logo.png'
 const Footer = () => {
     return (
 
- <footer className="footer w-9/12 mx-auto sm:footer-horizontal text-base-content py-10 px-4 my-10" >
+ <footer className="footer w-full md:w-9/12 mx-auto sm:footer-horizontal text-base-content py-10 px-4 " >
 
  
      <aside>
