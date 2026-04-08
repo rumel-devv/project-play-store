@@ -4,7 +4,7 @@ import { MdDownload } from 'react-icons/md';
 
 const AppCard = ({app}) => {
     return (
-         <div  className="card bg-base-100 w-full md:w-84  shadow-sm">
+         <div  className="card bg-base-100  shadow-sm">
                     <figure className='bg-gray-200 py-6'>
                  <img className='w-50 h-50 rounded-2xl'
                 src={app.image}
