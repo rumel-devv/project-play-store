@@ -5,6 +5,7 @@ import ErrorPage from '../../Error/ErrorPage';
 import { PacmanLoader } from 'react-spinners';
 import { FaDownload } from 'react-icons/fa';
 import { InstallAppsContext } from '../../context/InstallAppsContext';
+import { toast } from 'react-toastify';
 
 const Appdetails = () => {
 const {id} = useParams()
@@ -14,7 +15,7 @@ const {installApps,setInstallApps} = useContext(InstallAppsContext)
 
 const handleInstallApps = () => {
     setInstallApps([...installApps,expectedApps])
-    alert("Downloaded")
+    toast.success(`${expectedApps.companyName} is installed`,{autoClose: 2000},{transition: 'Flip'})
 }
 // console.log(installApps);
 
