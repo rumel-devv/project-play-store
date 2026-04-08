@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaDownload, FaStar } from 'react-icons/fa';
-import { MdDownload } from 'react-icons/md';
+import { Link } from 'react-router';
 
 const AppCard = ({app}) => {
     return (
@@ -17,6 +17,10 @@ const AppCard = ({app}) => {
                <button className='btn text-green-600'> <FaDownload></FaDownload> {app.downloads} </button>
                <button className='btn text-amber-500'> <FaStar></FaStar> {app.ratingAvg} </button>
            </div>
+
+           <Link to={`/apps/${app.id}`}>
+           <button className=' w-full bg-purple-600 btn text-white mt-1.5'>View Details</button>
+           </Link>
              </div>
                       </div>
     );
