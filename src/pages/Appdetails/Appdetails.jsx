@@ -1,19 +1,22 @@
-import React, { useState } from 'react';
+import React, { useContext} from 'react';
 import { useParams } from 'react-router';
 import UseApps from '../../hooks/UseApps';
 import ErrorPage from '../../Error/ErrorPage';
 import { PacmanLoader } from 'react-spinners';
 import { FaDownload } from 'react-icons/fa';
+import { InstallAppsContext } from '../../context/InstallAppsContext';
 
 const Appdetails = () => {
 const {id} = useParams()
 const {apps,loading} = UseApps()
 
-const [installApps,setInstallApps] = useState([])
+const {installApps,setInstallApps} = useContext(InstallAppsContext)
+
 const handleInstallApps = () => {
     setInstallApps([...installApps,expectedApps])
+    alert("Downloaded")
 }
-console.log(installApps);
+// console.log(installApps);
 
 if(loading){
     return <div className='flex justify-center items-center py-10'><PacmanLoader></PacmanLoader> </div>
